@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -12,12 +11,13 @@ public class Main {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String numberInput = reader.readLine();
 
-        try {
-            System.out.println((numtomorse(numberInput, numbers, morse)));
-        } catch (Exception e) {
-            System.out.println("Blad" + e);
+
+            try {
+                System.out.println((numtomorse(numberInput, numbers, morse)));
+            } catch (Exception e) {
+                System.out.println("Blad" + e);
+            }
         }
-    }
 
 
     public static StringBuilder numtomorse(String numberInput, char[] numbers, String[] morse){
