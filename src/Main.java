@@ -9,15 +9,14 @@ public class Main {
         char[] numbers = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
         String[] morse = {"-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----."};
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String numberInput = reader.readLine();
 
 
-            try {
-                System.out.println((numToMorse(numberInput, numbers, morse)));
-            } catch (Exception e) {
-                System.out.println("Blad" + e);
-            }
+        while (true) {
+            System.out.println("Wpisz cyfre...");
+            String numberInput = reader.readLine();
+            System.out.println((numToMorse(numberInput, numbers, morse)));
         }
+    }
 
 
     public static StringBuilder numToMorse(String numberInput, char[] numbers, String[] morse){
