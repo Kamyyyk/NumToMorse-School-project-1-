@@ -13,14 +13,14 @@ public class Main {
 
 
             try {
-                System.out.println((numtomorse(numberInput, numbers, morse)));
+                System.out.println((numToMorse(numberInput, numbers, morse)));
             } catch (Exception e) {
                 System.out.println("Blad" + e);
             }
         }
 
 
-    public static StringBuilder numtomorse(String numberInput, char[] numbers, String[] morse){
+    public static StringBuilder numToMorse(String numberInput, char[] numbers, String[] morse){
         StringBuilder answer = new StringBuilder();
         numberInput = numberInput.toLowerCase();
         char[] morsec = numberInput.toCharArray();
