@@ -10,28 +10,52 @@ public class WalrusCodeTest {
 
         //given
         String numberInput = "3";
-        Walrus_code Morse = new Walrus_code();
 
         //when
-        boolean result = Morse.CheckNumber(numberInput);
+        boolean result = Walrus_code.CheckNumber(numberInput);
 
         //then
-        Assertions.assertEquals(result,true);
+        Assertions.assertEquals(true,result);
     }
 
     @Test
-    public void main_numberInput_throwsIllegalArgumentException(){
+    public void CheckNumber_numberInputNotINT_False(){
+
+        //given
+        String numberInput = "3A!";
+
+        //when
+        boolean result = Walrus_code.CheckNumber(numberInput);
+
+        //then
+        Assertions.assertEquals(false,result);
+    }
+
+    @Test
+    public void CheckNumber_numberInputNotINT_False1(){
 
         //given
         String numberInput = "A";
-        Walrus_code Morse = new Walrus_code();
 
         //when
+        boolean result = Walrus_code.CheckNumber(numberInput);
 
-
-
-
-
+        //then
+        Assertions.assertEquals(false,result);
     }
+
+    @Test
+    public void numToMorse_numberInputINT_String(){
+
+        //given
+        String numberInput = "3";
+
+        //when
+        String result = Walrus_code.numToMorse(numberInput);
+
+        //then
+        Assertions.assertEquals("...--",result);
+    }
+
 
 }
